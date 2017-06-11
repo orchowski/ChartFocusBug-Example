@@ -14,12 +14,19 @@
             <RowDefinition Height="70"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.RowSpan="2" Background="AliceBlue" Opacity="0" Canvas.ZIndex="4"/>
+
         <TextBlock
             FontSize="24"
             FontWeight="Bold"
             TextWrapping="WrapWholeWords"
+            Grid.ColumnSpan="2"
             Text="Hi, to see that bug please zoom chart a bit and set mouse over the left legend."/>
-        <telerikChart:RadCartesianChart Grid.Row="1" x:Name="chart">            
+        <telerikChart:RadCartesianChart Grid.Row="1" Grid.ColumnSpan="2" x:Name="chart">            
             <telerikChart:RadCartesianChart.HorizontalAxis>
                 <telerikChart:CategoricalAxis/>
             </telerikChart:RadCartesianChart.HorizontalAxis>
